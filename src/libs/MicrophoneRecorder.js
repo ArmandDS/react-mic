@@ -67,6 +67,9 @@ export class MicrophoneRecorder {
       console.log('getUserMedia supported.')
       console.log('My Media')
       console.log(navigator.mediaDevices)
+      console.log(navigator.mediaDevices.getUserMedia())
+      console.log('Constrains')
+      console.log(navigator.mediaDevices.getUserMedia(constraints))
       navigator.mediaDevices.getUserMedia(constraints)
         .then((str) => {
           stream = str
